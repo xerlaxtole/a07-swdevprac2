@@ -1,0 +1,106 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 42vh;
+  padding: 3rem clamp(1.25rem, 6vw, 6rem);
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #10131a;
+}
+
+.background {
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    100deg,
+    rgba(10, 12, 18, 0.72) 0%,
+    rgba(10, 12, 18, 0.5) 42%,
+    rgba(10, 12, 18, 0.12) 100%
+  );
+}
+
+.content {
+  max-width: 46rem;
+  color: #f7f5f0;
+}
+
+.kicker {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #e0b872;
+}
+
+.headline {
+  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin-top: 1.5rem;
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(247, 245, 240, 0.82);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2.25rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  padding: 0.85rem 1.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.primaryAction {
+  background: #e0b872;
+  color: #1a1408;
+}
+
+.secondaryAction {
+  border: 1px solid rgba(247, 245, 240, 0.45);
+  color: #f7f5f0;
+}
+
+.selectButton {
+  position: absolute;
+  right: clamp(1.25rem, 4vw, 3rem);
+  bottom: 1.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  background: #e0b872;
+  color: #1a1408;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.selectButton:hover {
+  background: #ecc98a;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    min-height: 34vh;
+    padding: 3rem 1.25rem;
+  }
+}
